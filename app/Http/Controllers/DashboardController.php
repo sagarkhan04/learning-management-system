@@ -10,11 +10,16 @@ class DashboardController extends Controller
     {
 
         return view('dashboard.admin');
-        
+
     }
 
     public function student()
     {
         return view('dashboard.student');
+    }
+
+    public function studentCopy()
+    {
+        return view('dashboard.studentCopy');
     }
 }
