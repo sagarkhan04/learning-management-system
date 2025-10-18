@@ -64,33 +64,12 @@
 
         <!-- Right-side links -->
         <ul class="navbar-nav ms-auto align-items-center">
-
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-flex align-items-center text-danger" href="#" role="button" data-bs-toggle="dropdown">
-                Cart
+            <a class="nav-link d-flex align-items-center text-danger" href="{{ route('auth.register') }}" role="button" data-bs-toggle="dropdown">
+                Register
             </a>
-            <ul class="dropdown-menu dropdown-menu-end p-3" style="min-width: 400px;">
-                <div class="text-center">
-                <h1>Add to Cart</h1>
-            </ul>
-            <!-- Profile Dropdown -->
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
-                <img src="profile.jpg" class="rounded-circle me-2" alt="Profile" width="40" height="40">
-                {{ auth()->user()->name }}
+            <a class="nav-link d-flex align-items-center text-danger" href="{{ route('auth.login') }}" role="button" data-bs-toggle="dropdown">
+                Login
             </a>
-            <ul class="dropdown-menu dropdown-menu-end p-3" style="min-width: 200px;">
-                <div class="text-center">
-                <img src="lesson_icon.cd3c935.png" class="rounded-circle mb-2" alt="Profile Image" width="80" height="80">
-                <h6 class="fw-bold mb-0">{{ auth()->user()->name }}</h6>
-                <p class="small text-muted mb-2">{{ auth()->user()->email }}</p>
-                <a href="#" class="btn btn-warning btn-sm w-100 mb-2">View Profile</a>
-                </div>
-                <form method="POST" action="{{ route('auth.logout') }}">
-                    @csrf
-                    <button type="submit" class="btn">Logout</button>
-                </form>
-            </ul>
         </ul>
       </div>
     </div>

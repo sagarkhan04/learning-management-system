@@ -4,13 +4,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'admin'])->name('dashboard');
-Route::get('/student-dashboard', [App\Http\Controllers\DashboardController::class, 'student'])->name('student.dashboard');
-
-Route::get('/student-copy', [App\Http\Controllers\DashboardController::class, 'studentCopy'])->name('student.dashboard.studentCopy');
+Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'admin'])->name('dashboard.admin');
+Route::get('/student/dashboard', [App\Http\Controllers\DashboardController::class, 'student'])->name('dashboard.student');
 
 Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('auth.register');
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'store'])->name('auth.register.store');
@@ -19,3 +17,18 @@ Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'
 Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('auth.logout');
 
 
+
+
+// For Admin Only
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('dashboard.admin');
+    });
+});
+
+// For Student Only
+Route::middleware(['auth', 'role:student'])->group(function () {
+    Route::get('/student/dashboard', function () {
+        return view('dashboard.student');
+    });
+});

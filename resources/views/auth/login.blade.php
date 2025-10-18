@@ -24,11 +24,11 @@
           </div>
 
           <div class="mb-3 form-check">
-            <input type="checkbox" name="remember" class="form-check-input">
-            <label class="form-check-label">Remember me</label>
+            <input type="checkbox" name="remember" class="form-check-input" id="remember" required>
+            <label class="form-check-label" for="remember">Remember me</label>
           </div>
 
-          <button type="submit" class="btn btn-primary w-100">Login</button>
+          <button type="submit" class="btn btn-success w-100">Login</button>
         </form>
 
         <div class="text-center mt-3">

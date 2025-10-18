@@ -18,8 +18,4 @@ class DashboardController extends Controller
         return view('dashboard.student');
     }
 
-    public function studentCopy()
-    {
-        return view('dashboard.studentCopy');
-    }
-}
+    
