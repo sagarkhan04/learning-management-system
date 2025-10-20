@@ -105,6 +105,7 @@
             <iframe src="banner-1723114722.png" allowfullscreen></iframe>
           </div>
           <div class="course-content mt-4">
+            {{-- <h2 class="fw-bold mb-3">{{ $course->title }}</h2> --}}
             <h2 class="fw-bold mb-3">Code Your Future with PHP & MySQL</h2>
             <p>এই কোর্সে আপনি শিখবেন কীভাবে PHP এবং MySQL ব্যবহার করে Dynamic Website এবং Application তৈরি করা যায়। সহজ উদাহরণ, বাস্তব প্রজেক্ট এবং কুইজের মাধ্যমে আপনি পুরোপুরি প্রস্তুত হয়ে উঠবেন একজন পেশাদার ওয়েব ডেভেলপার হিসেবে।</p>
             <ul>
@@ -130,7 +131,7 @@
                     <li class="mb-3">&#9657 রিসোর্সেস</li>
                 </ul>
             </div>
-            <h5 class="mt-5">মূল্য: <span class="text-warning fw-bold">৳ ১৯৯৯ টাকা</span></h5>
+            <h5 class="mt-5">মূল্য: <span class="text-warning fw-bold">৳ ১৯৯৯ টাকা</span><span><s>৳ ৯৯৯ টাকা</s></span></h5>
             <a href="#" class="btn-enroll me-2">এনরোল করুন</a>
             <a href="#" class="btn-cart">কার্টে যোগ করুন</a>
         </div>

@@ -7,9 +7,10 @@ Route::get('/admin', function () {
     return view('backend.index');
 });
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
+
+
+
 
 Route::get('/admin/dashboard', [App\Http\Controllers\DashboardController::class, 'admin'])->name('dashboard.admin');
 Route::get('/student/dashboard', [App\Http\Controllers\DashboardController::class, 'student'])->name('dashboard.student');

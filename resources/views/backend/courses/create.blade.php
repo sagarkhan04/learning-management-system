@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-6">
                       <label for="lesson" class="form-label">Lesson</label>
-                      <input type="number" name="lesson" class="form-control" id="lesson">
+                      <input type="text" name="lesson" class="form-control" id="lesson">
                     </div>
                     <div class="col-6">
                       <label for="video" class="form-label">Video</label>

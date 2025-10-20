@@ -1,12 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Course;
 use App\Models\User;
 
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+
+    public function index()
+    {
+        $course = Course::first();
+        return view('index', compact('course'));
+    }
+
     public function admin()
     {
 
@@ -14,9 +23,10 @@ class DashboardController extends Controller
 
     }
 
-    public function student()
+   public function student()
     {
-        return view('dashboard.student');
+        $course = Course::first();
+        return view('dashboard.student', compact('course'));
     }
     public function users()
     {

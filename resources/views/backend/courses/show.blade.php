@@ -43,6 +43,26 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($courses as $course)
+                                        <tr>
+                                            <th scope="row">{{ $course->id }}</th>
+                                            <td>{{ $course->category }}</td>
+                                            <td>{{ $course->youtube_link }}</td>
+                                            <td>{{ $course->title }}</td>
+                                            <td>{{ $course->description }}</td>
+                                            <td>{{ $course->review }}</td>
+                                            <td>{{ $course->lesson }}</td>
+                                            <td>{{ $course->video }}</td>
+                                            <td>{{ $course->quiz }}</td>
+                                            <td>{{ $course->topic }}</td>
+                                            <td>{{ $course->resource }}</td>
+                                            <td>{{ $course->price }}</td>
+                                            <td>{{ $course->old_price }}</td>
+                                            <td>{{ $course->curriculum_title }}</td>
+                                            <td>{{ $course->curriculum_sub_title }}</td>
+                                            <td>{{ $course->video_or_url }}</td>
+                                        </tr>
+                                    @endforeach
 
                                 </tbody>
                             </table>
@@ -58,3 +78,14 @@
 </main><!-- End #main -->
 @include('backend.layout.inc.footer')
 @endsection
+
+
+@foreach ($courses as $user)
+                  <tr>
+                    <th scope="row">{{ $user->id }}</th>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->role }}</td>
+                    <td>{{ $user->created_at->timezone('UTC')->format('Y-m-d H:i a') }}</td>
+                  </tr>
+                 @endforeach
