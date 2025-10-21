@@ -64,7 +64,7 @@
                                             <td>{{ $course->video_or_url }}</td>
                                             <td>
                                                 <a href="{{ route('backend.courses.edit.post', $course->id)}}" class="btn btn-sm btn-primary">Edit</a>
-                                                <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this category?');">Delete</a>
+                                                <a href="{{ route('backend.courses.delete', $course->id)}}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this category?');">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach

@@ -40,7 +40,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/courses/show', [App\Http\Controllers\CourseController::class, 'show'])->name('backend.courses.show');
     Route::get('/admin/courses/edit/{id}', [App\Http\Controllers\CourseController::class, 'edit'])->name('backend.courses.edit');
     Route::post('/admin/courses/edit/{id}', [App\Http\Controllers\CourseController::class, 'updatepost'])->name('backend.courses.edit.post');
-    Route::get('/admin/courses/auth/delete', [App\Http\Controllers\CourseController::class, 'delete'])->name('backend.courses.delete');
+    Route::get('/admin/courses/delete/{id}', [App\Http\Controllers\CourseController::class, 'delete'])->name('backend.courses.delete');
 
 });
 

@@ -25,12 +25,12 @@
                   <form class="row g-3 needs-validation" method="POST">
                     @csrf
                     <h5 class="form-label mt-5">Course Information</h5>
-                    <div class="col-12">
+                    {{-- <div class="col-12">
                       <label for="category" class="form-label">Course Category</label>
                       <select name="category" id="category" class="form-select">
                         <option value="">{{$courses->category}}</option>
                       </select>
-                    </div>
+                    </div> --}}
                     <div class="col-6">
                       <label for="youtube_link" class="form-label">Youtube Link</label>
                       <input type="text" name="youtube_link" class="form-control" id="youtube_link" required value="{{$courses->youtube_link}}">
