@@ -44,13 +44,8 @@
                                     <h5 class="card-title">View <span>| Today</span></h5>
 
                                     <div class="d-flex align-items-center">
-                                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
-                                        </div>
-                                        <div class="ps-3">
-                                            <h6>0</h6>
-                                            <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">increase</span>
-
+                                        <div class="ps-3 text-center">
+                                            <h6 class="text-center">0</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -76,16 +71,11 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <h5 class="card-title">User<span>| This Month</span></h5>
+                                    <h5 class="card-title">User</span></h5>
 
                                     <div class="d-flex align-items-center">
-                                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-currency-dollar"></i>
-                                        </div>
                                         <div class="ps-3">
-                                            <h6>$3,264</h6>
-                                            <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
+                                            <h6>1</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -112,16 +102,11 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <h5 class="card-title">Customers <span>| This Year</span></h5>
+                                    <h5 class="card-title">All Courses</span></h5>
 
                                     <div class="d-flex align-items-center">
-                                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-people"></i>
-                                        </div>
                                         <div class="ps-3">
-                                            <h6>1244</h6>
-                                            <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
-
+                                            <h6>1</h6>
                                         </div>
                                     </div>
 

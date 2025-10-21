@@ -76,12 +76,12 @@
             <!-- Profile Dropdown -->
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
-                <img src="profile.jpg" class="rounded-circle me-2" alt="Profile" width="40" height="40">
+                <img src="/../profile.jpg" class="rounded-circle me-2" alt="Profile" width="40" height="40">
                 {{ auth()->user()->name }}
             </a>
             <ul class="dropdown-menu dropdown-menu-end p-3" style="min-width: 200px;">
                 <div class="text-center">
-                <img src="lesson_icon.cd3c935.png" class="rounded-circle mb-2" alt="Profile Image" width="80" height="80">
+                <img src="/../profile.jpg" class="rounded-circle mb-2" alt="Profile Image" width="80" height="80">
                 <h6 class="fw-bold mb-0">{{ auth()->user()->name }}</h6>
                 <p class="small text-muted mb-2">{{ auth()->user()->email }}</p>
                 <a href="#" class="btn btn-warning btn-sm w-100 mb-2">View Profile</a>
@@ -135,7 +135,7 @@
     <div class="row mt-5 align-items-center">
       <div class="col-md-6">
         <div class="certificate">
-          <img src="cer.png" alt="Certificate" class="img-fluid rounded">
+          <img src="/../cer.png" alt="Certificate" class="img-fluid rounded">
         </div>
       </div>
       <div class="col-md-6">
@@ -155,7 +155,7 @@
           <div id="intro" class="accordion-collapse collapse show" data-bs-parent="#courseCurriculum">
             <div class="accordion-body">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><img src="lesson_icon.cd3c935.png" width="20px"> ১। {{ $course->curriculum_sub_title}}</li>
+                <li class="list-group-item"><img src="/../lesson_icon.cd3c935.png" width="20px"> ১। {{ $course->curriculum_sub_title}}</li>
               </ul>
             </div>
           </div>
