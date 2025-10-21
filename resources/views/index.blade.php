@@ -64,10 +64,10 @@
 
         <!-- Right-side links -->
         <ul class="navbar-nav ms-auto align-items-center">
-            <a class="nav-link d-flex align-items-center text-danger" href="{{ route('auth.register') }}" role="button" data-bs-toggle="dropdown">
+            <a class="nav-link d-flex align-items-center text-danger" href="{{ route('auth.register') }}">
                 Register
             </a>
-            <a class="nav-link d-flex align-items-center text-danger" href="{{ route('auth.login') }}" role="button" data-bs-toggle="dropdown">
+            <a class="nav-link d-flex align-items-center text-danger" href="{{ route('auth.login') }}">
                 Login
             </a>
         </ul>

@@ -72,7 +72,7 @@ class CourseController extends Controller
 
         // Here you would typically save the course data to the database
         // For example:
-        Course::create($validatedData);
+        Course::find($id)->update($validatedData);
 
         return redirect()->route('backend.courses.show')->with('success', 'Course created successfully.');
     }

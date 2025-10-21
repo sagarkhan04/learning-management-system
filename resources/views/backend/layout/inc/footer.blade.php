@@ -1,5 +1,5 @@
 <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer fixed-bottom">
         <div class="copyright">
             &copy;{{ date('Y') }} Copyright <strong><span>Learning Management System</span></strong>. All Rights Reserved
         </div>
