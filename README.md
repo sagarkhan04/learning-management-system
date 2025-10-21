@@ -33,7 +33,7 @@ composer i
 ```
 - Generate key
 ```
-php artisan key:generate
+php artisan key: generate
 ```
 - Update database information in .env file
 ```
@@ -48,7 +48,7 @@ DB_PASSWORD=
 ```
 php artisan migrate
 ```
-- Seed databse
+- Seed database
 ```
 php artisan db:seed
 ```
@@ -68,7 +68,7 @@ Username:admin@gmail.com
 Password:1234
 ```
 
-## Studnt Details
+## Student Details
 - Student credential
 ```
 Username:student@gmail.com
@@ -76,7 +76,7 @@ Password:1234
 ```
 
 ## Added Database file(Checked)
-- learning-management-system.sql
+- learning-management-systems
 
 ## Credit
 
