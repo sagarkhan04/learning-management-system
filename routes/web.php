@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -37,14 +38,13 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/courses/create', [App\Http\Controllers\CourseController::class, 'create'])->name('backend.courses.create');
     Route::post('/admin/courses/create', [App\Http\Controllers\CourseController::class, 'store'])->name('backend.courses.create');
     Route::get('/admin/courses/show', [App\Http\Controllers\CourseController::class, 'show'])->name('backend.courses.show');
-    Route::post('/admin/courses/edit', [App\Http\Controllers\CourseController::class, 'update'])->name('backend.courses.update');
+    Route::get('/admin/courses/edit/{id}', [App\Http\Controllers\CourseController::class, 'edit'])->name('backend.courses.edit');
+    Route::post('/admin/courses/edit/{id}', [App\Http\Controllers\CourseController::class, 'updatepost'])->name('backend.courses.edit.post');
     Route::get('/admin/courses/auth/delete', [App\Http\Controllers\CourseController::class, 'delete'])->name('backend.courses.delete');
 
 });
 
 // For Student Only
 Route::middleware(['auth', 'role:student'])->group(function () {
-    Route::get('/student/dashboard', function () {
-        return view('dashboard.student');
-    });
+    Route::get('/student/dashboard', [DashboardController::class, 'student']);
 });

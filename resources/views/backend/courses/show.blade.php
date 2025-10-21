@@ -40,6 +40,7 @@
                                         <th scope="col">Curriculum Title</th>
                                         <th scope="col">Curriculum Sub-Title</th>
                                         <th scope="col">Video Or Url</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -61,6 +62,10 @@
                                             <td>{{ $course->curriculum_title }}</td>
                                             <td>{{ $course->curriculum_sub_title }}</td>
                                             <td>{{ $course->video_or_url }}</td>
+                                            <td>
+                                                <a href="{{ route('backend.courses.edit.post', $course->id)}}" class="btn btn-sm btn-primary">Edit</a>
+                                                <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this category?');">Delete</a>
+                                            </td>
                                         </tr>
                                     @endforeach
 

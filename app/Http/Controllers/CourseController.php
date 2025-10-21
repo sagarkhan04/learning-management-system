@@ -44,8 +44,17 @@ class CourseController extends Controller
         return view('backend.courses.show', compact('courses'));
     }
 
-    public function update()
+    public function edit($id)
     {
+        $courses = Course::first();
+        return view('backend.courses.edit', compact('courses'));
+    }
+    public function updatepost(Request $request, $id)
+    {
+        dd($request->all());
+
         return view('backend.courses.update');
     }
+
+
 }

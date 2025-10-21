@@ -96,42 +96,35 @@
     </div>
   </nav>
 
-  <div class="container py-5">
+<div class="container py-5">
     <!-- Course Header -->
     <div class="row g-4">
       <div class="col-lg-8">
         <div class="course-header">
           <div class="course-video">
-            <iframe src="banner-1723114722.png" allowfullscreen></iframe>
+            <iframe <iframe width="560" height="315" src="https://www.youtube.com/embed/OB8jBvu8N34?si=LXuFBPLl9sxOf_-d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" allowfullscreen></iframe>
+
           </div>
           <div class="course-content mt-4">
-            {{-- <h2 class="fw-bold mb-3">{{ $course->title }}</h2> --}}
-            <h2 class="fw-bold mb-3">Code Your Future with PHP & MySQL</h2>
-            <p>এই কোর্সে আপনি শিখবেন কীভাবে PHP এবং MySQL ব্যবহার করে Dynamic Website এবং Application তৈরি করা যায়। সহজ উদাহরণ, বাস্তব প্রজেক্ট এবং কুইজের মাধ্যমে আপনি পুরোপুরি প্রস্তুত হয়ে উঠবেন একজন পেশাদার ওয়েব ডেভেলপার হিসেবে।</p>
-            <ul>
-              <li>PHP এর বেসিক থেকে অ্যাডভান্স টপিক</li>
-              <li>Database Connection এবং CRUD অপারেশন</li>
-              <li>Form Validation, File Uploading</li>
-              <li>Dynamic Website Development</li>
-            </ul>
+            <h2 class="fw-bold mb-3">{{ $course->title }}</h2>
+            <p>{{ $course->description }}</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="course-sidebar">
-            <p>⭐ 4.9 (২৫০+ রিভিউ)</p>
-            <div class="mt-3">
+            <p>{{ $course->review }}</p><div class="mt-3">
             </div>
             <div class="mt-4 text-start">
                 <ul class="list-unstyled mb-5">
-                    <li class="mb-3">&#9657 ৬০ লেসন</li>
-                    <li class="mb-3">&#9657 ৫৭ ভিডিও</li>
-                    <li class="mb-3">&#9657 ৩ কুইজ</li>
-                    <li class="mb-3">&#9657 ৮ টপিক</li>
-                    <li class="mb-3">&#9657 রিসোর্সেস</li>
+                    <li class="mb-3">&#9657 {{ $course->lesson}}</li>
+                    <li class="mb-3">&#9657 {{ $course->video}}</li>
+                    <li class="mb-3">&#9657 {{ $course->quiz}}</li>
+                    <li class="mb-3">&#9657 {{ $course->topic}}</li>
+                    <li class="mb-3">&#9657 {{ $course->resource}}</li>
                 </ul>
             </div>
-            <h5 class="mt-5">মূল্য: <span class="text-warning fw-bold">৳ ১৯৯৯ টাকা</span><span><s>৳ ৯৯৯ টাকা</s></span></h5>
+            <h5 class="mt-5">মূল্য: <span class="text-warning fw-bold">৳ {{ $course->price}} টাকা</span> <span><s>৳ {{ $course->old_price}} টাকা</s></span></h5>
             <a href="#" class="btn-enroll me-2">এনরোল করুন</a>
             <a href="#" class="btn-cart">কার্টে যোগ করুন</a>
         </div>
@@ -142,7 +135,7 @@
     <div class="row mt-5 align-items-center">
       <div class="col-md-6">
         <div class="certificate">
-          <img src="#" alt="Certificate" class="img-fluid rounded">
+          <img src="cer.png" alt="Certificate" class="img-fluid rounded">
         </div>
       </div>
       <div class="col-md-6">
@@ -157,49 +150,16 @@
       <div class="accordion" id="courseCurriculum">
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#intro">Introduction<span class="mx-3"> ১ লেসন</span></button>
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#intro">{{ $course->curriculum_title}}<span class="mx-3"> ১ লেসন</span></button>
           </h2>
           <div id="intro" class="accordion-collapse collapse show" data-bs-parent="#courseCurriculum">
             <div class="accordion-body">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><img src="lesson_icon.cd3c935.png" width="20px"> ১। Course Introduction</li>
+                <li class="list-group-item"><img src="lesson_icon.cd3c935.png" width="20px"> ১। {{ $course->curriculum_sub_title}}</li>
               </ul>
             </div>
           </div>
         </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#php">PHP Basics<span class="mx-3">২ লেসন</span></button>
-          </h2>
-          <div id="php" class="accordion-collapse collapse" data-bs-parent="#courseCurriculum">
-            <div class="accordion-body">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">১। <img src="lesson_icon.cd3c935.png" width="20px"> What is PHP?</li>
-                <li class="list-group-item">২। <img src="lesson_icon.cd3c935.png" width="20px"> Installing PHP & Setup</li>
-                <li class="list-group-item">৩। <img src="lesson_icon.cd3c935.png" width="20px"> Variables & Data Types</li>
-                <li class="list-group-item">৪। <img src="lesson_icon.cd3c935.png" width="20px"> Operators</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mysql">MySQL Basics<span class="mx-3"> ৩ লেসন</span></button>
-          </h2>
-          <div id="mysql" class="accordion-collapse collapse" data-bs-parent="#courseCurriculum">
-            <div class="accordion-body">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">১। <img src="lesson_icon.cd3c935.png" width="20px"> Introduction to MySQL</li>
-                <li class="list-group-item">২। <img src="lesson_icon.cd3c935.png" width="20px"> Creating Database & Tables</li>
-                <li class="list-group-item">৩। <img src="lesson_icon.cd3c935.png" width="20px"> Insert, Update, Delete Query</li>
-                <li class="list-group-item">৪। <img src="lesson_icon.cd3c935.png" width="20px"> Connecting PHP with MySQL</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
