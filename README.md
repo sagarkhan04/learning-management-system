@@ -75,6 +75,9 @@ Username:student@gmail.com
 Password:1234
 ```
 
+## Added Database file(Checked)
+- learning-management-system.sql
+
 ## Credit
 
 - **[Md. Sagar](https://github.com/sagarkhan04/)**
