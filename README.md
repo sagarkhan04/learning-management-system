@@ -76,7 +76,7 @@ Password:1234
 ```
 
 ## Added Database file(Checked)
-- learning-management-systems
+- learning-management-system.sql
 
 ## Credit
 
