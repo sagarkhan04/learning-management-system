@@ -24,6 +24,26 @@
     .navbar-nav .nav-link {font-weight: 600; color: #111827;}
     .search-input {width: 300px;}
     @media(max-width: 768px){ .search-input {width: 100%; margin-top: 10px;} }
+
+
+    body {font-family: 'Noto Sans Bengali', sans-serif; background: #fff; color: #111827;}
+    .checkout-steps {display: flex; justify-content: center; align-items: center; margin: 40px 0; font-weight: 600;}
+    .checkout-steps span {color: #d1d5db; margin: 0 20px; position: relative;}
+    .checkout-steps span.active {color: #ff6b35;}
+    /* .checkout-steps span::after {content: ''; position: absolute; top: 50%; right: -20px; width: 40px; height: 2px; background: #e5e7eb; transform: translateY(-50%);} */
+    .checkout-steps span:last-child::after {display: none;}
+    .checkout-box {background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); padding: 30px; margin-bottom: 30px;}
+    .order-details h5 {font-weight: 700;}
+    .course-card {display: flex; align-items: center; justify-content: space-between; border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px 15px;}
+    .course-card img {border-radius: 8px; width: 80px; height: 60px; object-fit: cover;}
+    .course-info {flex-grow: 1; margin-left: 15px;}
+    .price {font-weight: 700; color: #111827;}
+    .welcome-box h4 {font-weight: 700; margin-bottom: 10px;}
+    .btn-submit {background: #ff6b35; color: #fff; border: none; border-radius: 8px; font-weight: 600; padding: 12px 0; width: 100%; transition: 0.3s;}
+    .btn-submit:hover {background: #e65c2f;}
+    .forgot-link {font-size: 14px; margin-top: 15px;}
+    .forgot-link a {color: #ff6b35; text-decoration: none;}
+    .forgot-link a:hover {text-decoration: underline;}
   </style>
 </head>
 <body>
@@ -96,70 +116,47 @@
     </div>
   </nav>
 
-<div class="container py-5">
-    <!-- Course Header -->
+  <div class="container py-5">
+    <!-- Checkout Steps -->
+    <div class="checkout-steps">
+      <span class="active">১ লগ ইন</span>
+      <span>২ চেক আউট</span>
+      <span>৩ পেমেন্ট</span>
+    </div>
+
     <div class="row g-4">
-      <div class="col-lg-8">
-        <div class="course-header">
-          <div class="course-video">
-            <iframe <iframe width="560" height="315" src="https://www.youtube.com/embed/OB8jBvu8N34?si=LXuFBPLl9sxOf_-d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" allowfullscreen></iframe>
-
-          </div>
-          <div class="course-content mt-4">
-            <h2 class="fw-bold mb-3">{{ $course->title }}</h2>
-            <p>{{ $course->description }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="course-sidebar">
-            <p>{{ $course->review }}</p><div class="mt-3">
+      <!-- Order Details -->
+      <div class="col-lg-6">
+        <div class="checkout-box order-details">
+          <h5>অর্ডার ডিটেইলস</h5>
+          <p class="text-muted small mb-4">অর্ডারের বিস্তারিত</p>
+          <div class="course-card">
+            <img src="/../card.jpg" alt="Course">
+            <div class="course-info">
+              <h6 class="mb-0">Code Your Future with PHP & MySQL</h6>
+              <small class="text-muted">Mahadi Tahsan</small>
             </div>
-            <div class="mt-4 text-start">
-                <ul class="list-unstyled mb-5">
-                    <li class="mb-3">&#9657 {{ $course->lesson}}</li>
-                    <li class="mb-3">&#9657 {{ $course->video}}</li>
-                    <li class="mb-3">&#9657 {{ $course->quiz}}</li>
-                    <li class="mb-3">&#9657 {{ $course->topic}}</li>
-                    <li class="mb-3">&#9657 {{ $course->resource}}</li>
-                </ul>
-            </div>
-            <h5 class="mt-5">মূল্য: <span class="text-warning fw-bold">৳ {{ $course->price}} টাকা</span> <span><s>৳ {{ $course->old_price}} টাকা</s></span></h5>
-            <a href="{{ route('dashboard.addcart') }}" class="btn-enroll me-2">এনরোল করুন</a>
-            <a href="#" class="btn-cart">কার্টে যোগ করুন</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Certificate Section -->
-    <div class="row mt-5 align-items-center">
-      <div class="col-md-6">
-        <div class="certificate">
-          <img src="/../cer.png" alt="Certificate" class="img-fluid rounded">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <h4 class="fw-bold mb-3">কোর্স শেষে সার্টিফিকেট পাবেন</h4>
-        <p>সফলভাবে কোর্স শেষ করলে আপনি পাবেন Learning Management System সার্টিফিকেট, যা আপনার প্রোফাইল এবং ক্যারিয়ারে বাড়াবে বিশ্বস্ততা।</p>
-      </div>
-    </div>
-
-    <!-- Curriculum Section -->
-    <div class="curriculum">
-      <h3 class="fw-bold mb-4">কোর্স কারিকুলাম</h3>
-      <div class="accordion" id="courseCurriculum">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#intro">{{ $course->curriculum_title}}<span class="mx-3"> ১ লেসন</span></button>
-          </h2>
-          <div id="intro" class="accordion-collapse collapse show" data-bs-parent="#courseCurriculum">
-            <div class="accordion-body">
-              <ul class="list-group list-group-flush">
-                 <a href="{{ $course->video_or_url}}" class="text-decoration-none"><li class="list-group-item"><img src="/../lesson_icon.cd3c935.png" width="20px"> ১। {{ $course->curriculum_sub_title}}</li></a>
-              </ul>
-            </div>
+            <div class="price">১৪৯৯ টাকা</div>
           </div>
         </div>
+      </div>
+
+      <!-- Welcome Box -->
+      <div class="col-lg-6">
+        <div class="checkout-box welcome-box text-center text-lg-start">
+          <h4>দক্ষতার যাত্রায় আপনাকে স্বাগতম!</h4>
+          <p class="text-muted">পেমেন্ট সম্পন্ন করতে মোবাইল নাম্বার দিয়ে এগিয়ে যান</p>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control form-control-lg" placeholder="মোবাইল নাম্বার" required>
+            </div>
+            <button type="submit" class="btn-submit">সাবমিট করুন</button>
+          </form>
+          <div class="forgot-link">
+            <p>প্রবেশওয়ার্ড ভুলে গেলে <a href="#">এখানে</a> ক্লিক করুন</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

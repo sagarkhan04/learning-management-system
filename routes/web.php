@@ -47,4 +47,5 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 // For Student Only
 Route::middleware(['auth', 'role:student'])->group(function () {
     Route::get('/student/dashboard', [DashboardController::class, 'student']);
+    Route::get('/student/dashboard/addcart', [DashboardController::class, 'addCart'])->name('dashboard.addcart');
 });

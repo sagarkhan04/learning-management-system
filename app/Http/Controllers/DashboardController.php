@@ -28,6 +28,13 @@ class DashboardController extends Controller
         $course = Course::first();
         return view('dashboard.student', compact('course'));
     }
+
+
+     public function addCart()
+    {
+        $course = Course::first();
+        return view('dashboard.addcart', compact('course'));
+    }
     public function users()
     {
         $users = User::all();

@@ -133,7 +133,7 @@
           <div id="intro" class="accordion-collapse collapse show" data-bs-parent="#courseCurriculum">
             <div class="accordion-body">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><img src="lesson_icon.cd3c935.png" width="20px"> ১। {{ $course->curriculum_sub_title}}</li>
+                <a href="{{ $course->video_or_url}}" class="text-decoration-none"><li class="list-group-item"><img src="lesson_icon.cd3c935.png" width="20px"> ১। {{ $course->curriculum_sub_title}}</li></a>
               </ul>
             </div>
           </div>
